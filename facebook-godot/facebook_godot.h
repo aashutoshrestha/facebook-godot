@@ -6,6 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "facebook_godot_implementation.h"
 void facebook_init();
 void facebook_deinit();
