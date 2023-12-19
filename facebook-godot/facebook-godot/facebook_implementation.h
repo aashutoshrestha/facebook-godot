@@ -24,8 +24,7 @@ public:
     
 //    void get_app_version();
    
-    void shareText(const String &title, const String &subject, const String &text);
-    void sharePic(const String &path, const String &title, const String &subject, const String &text);
+    void login();
     
     FacebookGodot();
     ~FacebookGodot();

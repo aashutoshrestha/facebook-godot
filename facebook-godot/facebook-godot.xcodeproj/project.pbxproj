@@ -10,6 +10,7 @@
 		6E27A4902B3184DB007384B5 /* facebook_godot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E27A48F2B3184DB007384B5 /* facebook_godot.mm */; };
 		6E27A4912B3184DB007384B5 /* facebook_godot.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E27A48E2B3184DB007384B5 /* facebook_godot.h */; };
 		6E27A4982B318660007384B5 /* facebook_implementation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E27A4972B318660007384B5 /* facebook_implementation.mm */; };
+		B4E8E78F68264FB39A136BE6 /* Pods_facebook_godot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F40021E892DB1DC84DD0ACE /* Pods_facebook_godot.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,11 +27,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5F40021E892DB1DC84DD0ACE /* Pods_facebook_godot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_facebook_godot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E27A48B2B3184DB007384B5 /* libfacebook-godot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libfacebook-godot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E27A48E2B3184DB007384B5 /* facebook_godot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facebook_godot.h; sourceTree = "<group>"; };
 		6E27A48F2B3184DB007384B5 /* facebook_godot.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = facebook_godot.mm; sourceTree = "<group>"; };
 		6E27A4972B318660007384B5 /* facebook_implementation.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = facebook_implementation.mm; sourceTree = "<group>"; };
 		6E27A4992B31867C007384B5 /* facebook_implementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facebook_implementation.h; sourceTree = "<group>"; };
+		80BDF78078E83C76CB6CF05F /* Pods-facebook-godot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-facebook-godot.release.xcconfig"; path = "Target Support Files/Pods-facebook-godot/Pods-facebook-godot.release.xcconfig"; sourceTree = "<group>"; };
+		D29A757750C46EF3783415E3 /* Pods-facebook-godot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-facebook-godot.debug.xcconfig"; path = "Target Support Files/Pods-facebook-godot/Pods-facebook-godot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E8E78F68264FB39A136BE6 /* Pods_facebook_godot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +54,8 @@
 			children = (
 				6E27A48D2B3184DB007384B5 /* facebook-godot */,
 				6E27A48C2B3184DB007384B5 /* Products */,
+				FA867A6B4A802801BD87EE76 /* Pods */,
+				8A1405A8A8E8D90331D77376 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +78,24 @@
 			path = "facebook-godot";
 			sourceTree = "<group>";
 		};
+		8A1405A8A8E8D90331D77376 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F40021E892DB1DC84DD0ACE /* Pods_facebook_godot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA867A6B4A802801BD87EE76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D29A757750C46EF3783415E3 /* Pods-facebook-godot.debug.xcconfig */,
+				80BDF78078E83C76CB6CF05F /* Pods-facebook-godot.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +103,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E27A4942B3184DB007384B5 /* Build configuration list for PBXNativeTarget "facebook-godot" */;
 			buildPhases = (
+				89B570E323CCD8A744645E4F /* [CP] Check Pods Manifest.lock */,
 				6E27A4872B3184DB007384B5 /* Sources */,
 				6E27A4882B3184DB007384B5 /* Frameworks */,
 				6E27A4892B3184DB007384B5 /* CopyFiles */,
@@ -122,6 +148,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89B570E323CCD8A744645E4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-facebook-godot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E27A4872B3184DB007384B5 /* Sources */ = {
@@ -254,6 +305,7 @@
 		};
 		6E27A4952B3184DB007384B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D29A757750C46EF3783415E3 /* Pods-facebook-godot.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
@@ -269,6 +321,7 @@
 		};
 		6E27A4962B3184DB007384B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80BDF78078E83C76CB6CF05F /* Pods-facebook-godot.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
