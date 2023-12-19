@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6E27A4902B3184DB007384B5 /* facebook_godot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E27A48F2B3184DB007384B5 /* facebook_godot.mm */; };
 		6E27A4912B3184DB007384B5 /* facebook_godot.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E27A48E2B3184DB007384B5 /* facebook_godot.h */; };
+		6E27A4982B318660007384B5 /* facebook_implementation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E27A4972B318660007384B5 /* facebook_implementation.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		6E27A48B2B3184DB007384B5 /* libfacebook-godot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libfacebook-godot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E27A48E2B3184DB007384B5 /* facebook_godot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facebook_godot.h; sourceTree = "<group>"; };
 		6E27A48F2B3184DB007384B5 /* facebook_godot.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = facebook_godot.mm; sourceTree = "<group>"; };
+		6E27A4972B318660007384B5 /* facebook_implementation.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = facebook_implementation.mm; sourceTree = "<group>"; };
+		6E27A4992B31867C007384B5 /* facebook_implementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facebook_implementation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +63,10 @@
 		6E27A48D2B3184DB007384B5 /* facebook-godot */ = {
 			isa = PBXGroup;
 			children = (
+				6E27A4972B318660007384B5 /* facebook_implementation.mm */,
 				6E27A48E2B3184DB007384B5 /* facebook_godot.h */,
 				6E27A48F2B3184DB007384B5 /* facebook_godot.mm */,
+				6E27A4992B31867C007384B5 /* facebook_implementation.h */,
 			);
 			path = "facebook-godot";
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E27A4902B3184DB007384B5 /* facebook_godot.mm in Sources */,
+				6E27A4982B318660007384B5 /* facebook_implementation.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

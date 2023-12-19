@@ -7,23 +7,19 @@
 
 #import <Foundation/Foundation.h>
 #import "facebook_godot.h"
-#import "facebook_godot_implementation.h"
+#import "facebook_implementation.h"
 #import "core/engine.h"
 
 
-GodotFacebook *godotFacebook;
+FacebookGodot *godotFacebook;
 
 void godot_facebook_init() {
-    godotFacebook = memnew(godotFacebook);
-    Engine::get_singleton()->add_singleton(Engine::Singleton("GodotFacebook", godotFacebook));
-    
+    godotFacebook = memnew(FacebookGodot);
+    Engine::get_singleton()->add_singleton(Engine::Singleton("FacebookGodot", godotFacebook));
 }
 
 void godot_facebook_deinit() {
-   
-    
-    if (godotShare) {
-       memdelete(godotShare);
-       
+    if (godotFacebook) {
+       memdelete(godotFacebook);
    }
 }
