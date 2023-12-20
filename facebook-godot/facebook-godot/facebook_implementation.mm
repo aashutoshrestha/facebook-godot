@@ -29,6 +29,9 @@ NSString* to_nsstring(String str) {
 void FacebookGodot::_bind_methods() {
     NSLog(@"GodotShare Plugin: Binding Methods...");
         ClassDB::bind_method("login", &FacebookGodot::login);
+    
+    ADD_SIGNAL(MethodInfo(SIGNAL_LOGIN_SUCCESS, PropertyInfo(Variant::DICTIONARY, "result")));
+    ADD_SIGNAL(MethodInfo(SIGNAL_LOGIN_ERROR, PropertyInfo(Variant::DICTIONARY, "result")));
       
     NSLog(@"GodotShare Plugin: Binding Methods completed.");
 }
@@ -47,6 +50,14 @@ void FacebookGodot::login(){
                                                                            parameters:@{@"fields": @"picture, name, email"}]
                          startWithCompletion:^(id<FBSDKGraphRequestConnecting>  _Nullable connection, id  _Nullable userinfo, NSError * _Nullable error) {
                             NSLog(@"User Info %@", userinfo);
+//                            Variant godot_result = Variant();
+//                            
+//                            if (result) {
+//                                String errs;
+//                                int errl;
+//                                
+//                                JSON::parse(*(new String(result)), godot_result, errs, errl);
+//                            }
                         }];
                     }
                     NSLog(@"Logged in");

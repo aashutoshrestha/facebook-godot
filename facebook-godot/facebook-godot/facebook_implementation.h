@@ -11,6 +11,7 @@
 #include "core/object.h"
 #include "facebook_godot.h"
 #include "core/engine.h"
+#include "core/io/json.h"
 
 
 class FacebookGodot : public Object {
