@@ -70,10 +70,10 @@
 		6E27A48D2B3184DB007384B5 /* facebook-godot */ = {
 			isa = PBXGroup;
 			children = (
-				6E27A4972B318660007384B5 /* facebook_implementation.mm */,
 				6E27A48E2B3184DB007384B5 /* facebook_godot.h */,
 				6E27A48F2B3184DB007384B5 /* facebook_godot.mm */,
 				6E27A4992B31867C007384B5 /* facebook_implementation.h */,
+				6E27A4972B318660007384B5 /* facebook_implementation.mm */,
 			);
 			path = "facebook-godot";
 			sourceTree = "<group>";
@@ -92,7 +92,6 @@
 				D29A757750C46EF3783415E3 /* Pods-facebook-godot.debug.xcconfig */,
 				80BDF78078E83C76CB6CF05F /* Pods-facebook-godot.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
