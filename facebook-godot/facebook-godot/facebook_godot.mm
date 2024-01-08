@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "facebook_godot.h"
 #import "facebook_implementation.h"
-#import "core/engine.h"
+#import "core/config/engine.h"
 
 
 FacebookGodot *godotFacebook;

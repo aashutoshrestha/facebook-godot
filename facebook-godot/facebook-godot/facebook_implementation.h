@@ -6,11 +6,10 @@
 //
 
 #ifndef facebook_implementation_h
-#define facebook_implementation_h
-
-#include "core/object.h"
+#define facebook_implementation_hb
+#include "core/object/object.h"
 #include "facebook_godot.h"
-#include "core/engine.h"
+#include "core/config/engine.h"
 #include "core/io/json.h"
 
 

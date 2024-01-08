@@ -10,14 +10,9 @@
 #import "facebook_implementation.h"
 #import <FBSDKLoginKit/FBSDKLoginKit-Swift.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-#if VERSION_MAJOR == 4
 #import "platform/ios/app_delegate.h"
 #import "platform/ios/view_controller.h"
-#else
-#import "platform/iphone/app_delegate.h"
-#import "platform/iphone/view_controller.h"
-#endif
-#include "platform/iphone/platform_config.h"
+#include "platform/ios/platform_config.h"
 String from_nsstring(NSString* str) {
     const char *s = [str UTF8String];
     return String::utf8(s != NULL ? s : "");
