@@ -7,6 +7,7 @@
 
 #ifndef facebook_implementation_h
 #define facebook_implementation_hb
+#import <UIKit/UIKit.h>
 #include "core/object/object.h"
 #include "facebook_godot.h"
 #include "core/config/engine.h"
@@ -24,6 +25,7 @@ public:
     
 //    void get_app_version();
    
+    void initialize();
     void login();
     
     FacebookGodot();

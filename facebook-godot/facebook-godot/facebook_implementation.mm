@@ -8,8 +8,10 @@
 #import <Foundation/Foundation.h>
 #import "facebook_godot.h"
 #import "facebook_implementation.h"
+#import <AuthenticationServices/AuthenticationServices.h>
+#import <SafariServices/SafariServices.h>
 #import <FBSDKLoginKit/FBSDKLoginKit-Swift.h>
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit-Swift.h>
 #import "platform/ios/app_delegate.h"
 #import "platform/ios/view_controller.h"
 #include "platform/ios/platform_config.h"
@@ -23,6 +25,7 @@ NSString* to_nsstring(String str) {
 
 void FacebookGodot::_bind_methods() {
     NSLog(@"GodotShare Plugin: Binding Methods...");
+        ClassDB::bind_method("initialize", &FacebookGodot::initialize);
         ClassDB::bind_method("login", &FacebookGodot::login);
     
     ADD_SIGNAL(MethodInfo(SIGNAL_LOGIN_SUCCESS, PropertyInfo(Variant::DICTIONARY, "result")));
@@ -31,6 +34,19 @@ void FacebookGodot::_bind_methods() {
     NSLog(@"GodotShare Plugin: Binding Methods completed.");
 }
 
+void FacebookGodot::initialize(){
+    UIApplication *application = [UIApplication sharedApplication];
+    
+    [FBSDKApplicationDelegate.sharedInstance application:application didFinishLaunchingWithOptions:[NSMutableDictionary dictionary]];
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                                           openURL:[NSURL URLWithString:@""]
+                                 sourceApplication:@""
+                                                   annotation:@""];
+    [FBSDKApplicationDelegate initialize];
+//
+    
+
+}
 
 void FacebookGodot::login(){
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
